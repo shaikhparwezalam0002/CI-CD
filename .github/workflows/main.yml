@@ -23,5 +23,5 @@ jobs:
       - name: install dependecies
         run: |
           pip install pytest
-      - name: Run testing.py
+      - name: Run test_calculator.py
         run: python test_calculator.py
