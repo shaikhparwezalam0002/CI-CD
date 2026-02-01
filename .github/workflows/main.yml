@@ -15,6 +15,11 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
+      - name: upgrade pip first
+        run: |
+          pip install --upgrade pip
+          
       - name: install dependecies
         run: |
           pip install requirement.txt
