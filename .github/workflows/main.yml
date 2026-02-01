@@ -30,6 +30,8 @@ jobs:
           mkdir build
           cp -r app build/
           zip -r python-app-build.zip build
+          path: python-app-build.zip
+
 
       - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
