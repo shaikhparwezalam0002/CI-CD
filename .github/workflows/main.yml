@@ -15,5 +15,8 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: install dependecies
+        run: |
+          pip install requirement.txt
       - name: Run testing.py
         run: python test_calculator.py
