@@ -1,13 +1,13 @@
----
-name: CI/CD WITH TEST CASE
+name: Python CI Pipeline
+
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+
 jobs:
-  dev-job:
-    name: Run Dev Script
+  build-test:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
