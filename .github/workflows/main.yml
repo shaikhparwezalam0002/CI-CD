@@ -24,3 +24,14 @@ jobs:
           python -m pip install pytest
       - name: Run test_calculator.py
         run: python -m pytest
+
+      - name: create build artifact
+        run: |
+          mkdir build
+          cp -r app build/
+          zip -r python-app-build.zip build
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: python-app-build
